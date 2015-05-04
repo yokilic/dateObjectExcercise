@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // Yeni bir Date objesi yaratıyoruz
+    var dateNow = new Date();
+    // Bu Date objesinden getmonth metodunu kullanarak kaçıncı ayda olduğumuzu çekiyoruz. (0-11 arası bir sayı veriyor)
+    var month = dateNow.getMonth();
+    // getMont metodu khangi ayda olduğumuzu sayı olarak verdiği için aylar için bir array oluşturuyoruz daha sonra aldığımız rakamı bu arrayin indexi olarak kullanacağız
+    var monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // Ayla riçin olduğu gibi günler için de aynısını yapıyoruz
+    var dayArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    // Önümüzdeki sene hangi günde olduğumuzu bulmak için 12 ay ekliyoruz. Bu metot 12 ay eklendiğinde bütün objeyi değişiklik yapıyor
+    dateNow.setMonth(month + 12);
+    // aşağıdaki şekilde çıktı oluşturuyoruz
+    document.write("1 Yıl sonra bugün " + dateNow.getDate() +" " + monthArray[dateNow.getMonth()] +" "+ dateNow.getFullYear() + " " + dayArray[dateNow.getDay()] + " olacak");
+
+
+</script>
+</body>
+</html>
